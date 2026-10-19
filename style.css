@@ -1,0 +1,285 @@
+/* ===== PENGATURAN DASAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4ec;
+    color: #35251b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background-color: #3b2418;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e8bd79;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e8bd79;
+}
+
+/* ===== MENU HAMBURGER ===== */
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(35, 20, 10, 0.65),
+        rgba(35, 20, 10, 0.65)),
+        url("https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b8793e;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #895329;
+}
+
+/* ===== BAGIAN UMUM ===== */
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #5b3825;
+    margin-bottom: 35px;
+}
+
+/* ===== TENTANG KAMI ===== */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.about-content img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #754927;
+}
+
+/* ===== PRODUK ===== */
+.products {
+    background-color: #eee4d5;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 15px 15px 5px;
+    color: #754927;
+}
+
+.product-card p {
+    padding: 0 15px 20px;
+}
+
+/* ===== KEUNGGULAN ===== */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+    color: #754927;
+    margin-bottom: 10px;
+}
+
+/* ===== KONTAK ===== */
+.contact {
+    background-color: #eee4d5;
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #3b2418;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* ===== RESPONSIVE UNTUK HP ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        border-top: 1px solid #654936;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+
+    .product-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
